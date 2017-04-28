@@ -20,6 +20,8 @@ namespace JWT
                     return new HMACSHA384Algorithm();
                 case JwtHashAlgorithm.HS512:
                     return new HMACSHA512Algorithm();
+                case JwtHashAlgorithm.RS256:
+                    return new RS256Algorithm();
                 default:
                     throw new InvalidOperationException($"Algorithm {algorithm} is not supported.");
             }
